@@ -1,0 +1,276 @@
+/* styles.css */
+
+/* Importation de la police Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    padding: 16 px;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Section Accueil */
+#accueil {
+    text-align: center;
+    padding: 32px;
+    background-color: #f4f4f4;
+}
+
+/* Section À propos */
+#a-propos {
+    padding: 32px;
+    background-color: #e2e2e2;
+}
+
+#a-propos video {
+    display: block;
+    margin: 16px auto;
+    max-width: 100%;
+}
+
+/* Section Travail */
+#travail {
+    padding: 32px;
+    background-color: #f4f4f4;
+}
+
+#travail ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#travail ul li {
+    padding: 8px 0;
+}
+
+/* Section CV */
+#cv {
+    padding: 32px;
+    background-color: #e2e2e2;
+}
+
+#cv table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#cv th, #cv td {
+    border: 1px solid #ccc;
+    padding: 08px;
+    text-align: left;
+}
+
+#cv th {
+    background-color: #333;
+    color: white;
+}
+
+/* Section Contact */
+#contact {
+    padding: 32px;
+    background-color: #f4f4f4;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact label {
+    margin: 8px 3.2px ;
+}
+
+#contact input, #contact textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 16px ;
+}
+
+#contact button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+#contact button:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 16px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#a-propos">À propos</a></li>
+                <li><a href="#travail">Travail</a></li>
+                <li><a href="#cv">CV</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Section Accueil -->
+        <section id="accueil">
+            <h1>Bienvenue sur mon portfolio</h1>
+            <p>Découvrez mon travail et apprenez-en plus sur moi.</p>
+        </section>
+
+        <!-- Section À propos -->
+        <section id="a-propos">
+            <h2>À propos</h2>
+            <p>Je suis un développeur web passionné par la création de sites web intuitifs et fonctionnels.</p>
+            <video controls>
+                <source src="video/presentation.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la balise vidéo.
+            </video>
+        </section>
+
+        <!-- Section Travail -->
+        <section id="travail">
+            <h2>Travail</h2>
+            <ul>
+                <li>Projet 1 - Site e-commerce</li>
+                <li>Projet 2 - Blog personnel</li>
+                <li>Projet 3 - Application de gestion de tâches</li>
+            </ul>
+        </section>
+
+        <!-- Section CV -->
+        <section id="cv">
+            <h2>CV</h2>
+            <table>
+                <tr>
+                    <th>Année</th>
+                    <th>Expérience</th>
+                </tr>
+                <tr>
+                    <td>2023</td>
+                    <td>Développeur Web chez XYZ</td>
+                </tr>
+                <tr>
+                    <td>2021-2022</td>
+                    <td>Stage en développement chez ABC</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <form action="submit_form.php" method="post">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+                
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#accueil" class="nav-link">Accueil</a></li>
+                <li class="nav-item"><a href="#a-propos" class="nav-link">À propos</a></li>
+                <li class="nav-item"><a href="#travail" class="nav-link">Travail</a></li>
+                <li class="nav-item"><a href="#cv" class="nav-link">CV</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Section Accueil -->
+        <section id="accueil" class="section accueil">
+            <h1 class="section-title">Bienvenue sur mon portfolio</h1>
+            <p class="section-description">Découvrez mon travail et apprenez-en plus sur moi.</p>
+        </section>
+
+        <!-- Section À propos -->
+        <section id="a-propos" class="section a-propos">
+            <h2 class="section-title">À propos</h2>
+            <p class="section-description">Je suis un développeur web passionné par la création de sites web intuitifs et fonctionnels.</p>
+            <video controls class="video-presentation">
+                <source src="https://youtu.be/yD4G8aDNxYA?si=jUO79LZrz8_Qc2Vo
+                " type="video/mp4">
+                
